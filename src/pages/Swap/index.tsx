@@ -652,17 +652,20 @@ export default function Swap() {
                       />
                     </Trace>
 
-                    {recipient !== null && !showWrap ? (
+                    {account && !showWrap ? (
                       <>
                         <AutoRow justify="space-between" style={{ padding: '0 1rem' }}>
-                          <ArrowWrapper clickable={false} phase0Flag={phase0FlagEnabled}>
+                          {/* <ArrowWrapper clickable={false} phase0Flag={phase0FlagEnabled}>
                             <ArrowDown size="16" color={theme.deprecated_text2} />
-                          </ArrowWrapper>
+                          </ArrowWrapper> */}
                           <LinkStyledButton id="remove-recipient-button" onClick={() => onChangeRecipient(null)}>
                             <Trans>- Remove recipient</Trans>
                           </LinkStyledButton>
+                          <LinkStyledButton id="remove-recipient-button" onClick={() => onChangeRecipient(account)}>
+                            <Trans>- Use mine</Trans>
+                          </LinkStyledButton>
                         </AutoRow>
-                        <AddressInputPanel id="recipient" value={recipient} onChange={onChangeRecipient} />
+                        <AddressInputPanel id="recipient" value={recipient || ''} onChange={onChangeRecipient} />
                       </>
                     ) : null}
                     {!showWrap && userHasSpecifiedInputOutput && (trade || routeIsLoading || routeIsSyncing) && (
