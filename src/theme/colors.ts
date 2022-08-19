@@ -188,6 +188,7 @@ export interface Palette {
   accentSuccess: Color
   accentWarning: Color
   accentFailure: Color
+  accentCritical: Color
 
   accentActionSoft: Color
   accentActiveSoft: Color
@@ -205,7 +206,6 @@ export interface Palette {
 
   white: Color
   black: Color
-  none: Color
 
   chain_1: Color
   chain_3: Color
@@ -223,12 +223,11 @@ export interface Palette {
   chain_42161_background: Color
 
   flyoutDropShadow: Color
+  deepShadow: Color
 }
 
 export const colorsLight: Palette = {
   userThemeColor: colors.magentaVibrant,
-
-  none: 'transparent',
 
   backgroundBackdrop: colors.white,
   backgroundSurface: colors.white,
@@ -247,6 +246,7 @@ export const colorsLight: Palette = {
   accentSuccess: colors.green400,
   accentWarning: colors.gold200,
   accentFailure: colors.red400,
+  accentCritical: colors.red400,
 
   accentActionSoft: opacify(12, colors.pink400),
   accentActiveSoft: opacify(12, colors.blue400),
@@ -282,6 +282,8 @@ export const colorsLight: Palette = {
 
   flyoutDropShadow:
     '0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.12);',
+  deepShadow:
+    '8px 12px 20px rgba(51, 53, 72, 0.04), 4px 6px 12px rgba(51, 53, 72, 0.02), 4px 4px 8px rgba(51, 53, 72, 0.04);',
 }
 
 export const colorsDark: Palette = {
@@ -304,6 +306,7 @@ export const colorsDark: Palette = {
   accentSuccess: colors.greenVibrant,
   accentWarning: colors.gold200,
   accentFailure: colors.red400,
+  accentCritical: colors.red300,
 
   accentActionSoft: opacify(24, colors.blue400),
   accentActiveSoft: opacify(12, colors.blue400),
@@ -321,7 +324,6 @@ export const colorsDark: Palette = {
 
   white: colors.white,
   black: colors.black,
-  none: 'transparent',
 
   chain_1: colors.networkEthereum,
   chain_3: colors.yellow400,
@@ -340,4 +342,5 @@ export const colorsDark: Palette = {
 
   flyoutDropShadow:
     '0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.12);',
+  deepShadow: '12px 16px 24px rgba(0, 0, 0, 0.24), 12px 8px 12px rgba(0, 0, 0, 0.24), 4px 4px 8px rgba(0, 0, 0, 0.32);',
 }
